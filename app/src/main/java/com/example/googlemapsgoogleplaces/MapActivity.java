@@ -66,7 +66,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private static final float DEFAULT_ZOOM = 15f;
 
     // widgets
-    private EditText mSearchText
+    private EditText mSearchText;
 
 
     //vars
@@ -103,7 +103,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         });
     }
     private void geoLocate(){
-        Log.d(TAG, "geolocating"){
+        Log.d(TAG, "geolocating");
             String searchingString = mSearchText.getText().toString();
             Geocoder geocoder = new Geocoder(MapActivity.this);
             List<Address> list = new ArrayList<>();
@@ -120,7 +120,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 //Toast.makeText(this, address.toString(), Toast.LENGTH_SHORT).show();
             }
         }
-    }
+
 
     private void getDeviceLocation(){
         Log.d(TAG,"getDeviceLocation: get device current location");
@@ -186,7 +186,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         }
     }
 
-    ;
+
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
